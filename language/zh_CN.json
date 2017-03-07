@@ -1,0 +1,284 @@
+{
+  "dict" : {
+    "ALARMLEVEL" : "报警等级",
+    "alarmlevel" : {
+      "ONE" : "一般",
+      "TWO" : "中等",
+      "THREE" : "严重",
+      "FOURE" : "重大"
+    },
+    "ALARMCODE" : "报警码",
+    "alarmcode" : {
+      "ALTERNATOR" : "发电机",
+      "alternator" : {
+        "VAR10" : "发电机设备机舱急停动作",
+        "VAR11" : "发电机设备机塔底急停动作"
+      },
+      "VPAMC" : "变桨与主控",
+      "vpamc" : {
+        "VAR1" : "变桨与主控设备CA故障",
+        "VAR3" : "变桨与主控设备智能IO与主控异常",
+        "VAR2" : "变桨与主控设备变流器CA主控异常"
+      }
+    }
+  },
+  "header" : {
+    "navbar" : {
+      "SREACHPRO" : "检索风场...",
+      "userinfo" : {
+        "SETTINGS" : "设置",
+        "HELP" : "帮助",
+        "PROFILE" : "个人帐户",
+        "NEW" : "新增",
+        "LOGOUT" : "退出",
+        "NOTIFICATIONS" : "通知"
+      },
+      "UPLOAD" : "Upload",
+      "lang" : {
+        "en" : "英文",
+        "zh_CN" : "中文"
+      },
+      "NOTIFICATIONS" : "Notifications"
+    }
+  },
+  "aside" : {
+    "nav" : {
+      "DASHBOARD" : "首页",
+      "WINDSPACE" : "全国风场地图",
+      "STATION" : "场站管理",
+      "station" : {
+        "WINDFARMMAINTAIN" : "风场管理",
+        "FANMAINTAIN" : "风机管理"
+      },
+      "ALARM" : "设备报警",
+      "alarm" : {
+        "LIGHTWORDALARM" : "光字报警",
+        "STOPLIST" : "停机列表",
+        "ABNORMALOUTPUT" : "异常出力",
+        "EQUIPALARM" : "报警查询"
+      },
+      "MONITORING" : "实时监控",
+      "monitoring" : {
+        "MOVICON" : "监控"
+      },
+      "BIGDATAREPOTRT" : "大数据报表",
+      "bigdatarepotrt" : {
+        "REPORT5" : "时序数据比较",
+        "REPORT4" : "单风机风功率曲线",
+        "REPORT3" : "单风机性能曲线",
+        "REPORT2" : "风资源发电量排名",
+        "REPORT1" : "控制系统性能分析"
+      },
+      "REPORT" : "大数据报表",
+      "report" : {
+        "SINGLEPOWERCURVE" : "单风机风功率曲线"
+      },
+      "ANALYSIS" : "统计分析",
+      "analysis" : {
+        "ENERGYANALYSIS" : "能耗分析",
+        "ESAERSTATISTICSMANAGE" : "节能减排统计",
+        "OPERATIONSTATISTICSMANAGE" : "操作统计"
+      },
+      "JOB" : "任务管理",
+      "job" : {
+        "JOBMAINTAIN" : "任务配置",
+        "JOBHISTORY" : "任务记录"
+      },
+      "CONFIG" : "配置管理",
+      "config" : {
+        "DICTIONARYMANAGE" : "数据字典"
+      },
+      "SYSTEM" : "系统管理",
+      "system" : {
+        "USERMANGE" : "用户管理",
+        "ROLEMANAGE" : "角色管理",
+        "RESOURCEMANAGE" : "资源管理",
+        "DOMAINMANAGE" : "域管理",
+        "SYSTEMCONFIG" : "系统配置",
+        "MULTILANGUAGE" : "多国语言配置"
+      },
+      "YOUR_STUFF" : "你的",
+      "your_stuff" : {
+        "YOUR_STUFF" : "你的",
+        "PROFILE" : "个人帐户",
+        "DOCUMENTS" : "帮助文档"
+      },
+      "MILESTONE" : "年发电量完成率",
+      "RELEASE" : "月发电量完成率",
+      "HEADER" : "智能云平台"
+    }
+  },
+  "plugin" : {
+    "confirmPopover" : {
+      "ok" : "确定",
+      "cancel" : "取消"
+    },
+    "windFarm" : {
+      "SELECTFARM" : "请选择风场...",
+      "SELECTFAN" : "请选择风机..."
+    }
+  },
+  "message" : {
+    "common" : {
+      "system" : {
+        "error" : "系统异常请联系管理员。"
+      },
+      "delMessage" : "是否确认删除？",
+      "saveSuccess" : "保存成功!",
+      "delSuccess" : "删除成功!",
+      "pattern" : "请按照{{val}}格式输入。",
+      "required" : "此项必须输入。",
+      "email" : "必须输入邮件格式",
+      "downloadMessage" : "是否确认下载？",
+      "downloadSuccess" : "下载成功",
+      "generateSuccess" : "生成文件成功",
+      "uploadSuccess" : "上传文件成功",
+      "imageSizeError" : "图片超过2M,请将压缩图片后上传。",
+      "validator" : "输入项目错误。",
+      "flushConfirm" : "确认是否需要立即生效吗？",
+      "flushCacheSuccess" : "立即生效成功。"
+    },
+    "job" : {
+      "jobmanage" : {
+        "timecheck" : "开始时间大于结束时间!",
+        "weekcheck" : "请选择任务执行星期",
+        "dayCheck" : "某些月份没有所选日期，该月可能不会执行任务!"
+      }
+    },
+    "system" : {
+      "usermanage" : {
+        "unlocked" : "是否确定解锁？",
+        "locked" : "是否确定加锁？",
+        "passwdreset" : "是否确认重置密码？",
+        "passwdresetSuccess" : "重置密码成功!",
+        "usernamepattern" : "必须输入 a-zA-Z0-9格式，4-10 长度",
+        "passwordError" : "两个密码不相同！"
+      },
+      "rolemanage" : {
+        "bindSuccess" : "邦定资源成功！"
+      },
+	  "multiLang": 
+		{
+			"EXPORTTEMPLATE": "请选择导出的模板",
+			"IMPORTTEMPLATE": "请选择上传的模板",
+			"RESETCACHE": "请确认导入数据是否立即生效？",
+			"GENERATECONFIRM": "该功能会更改系统相关配置，<br>是否继续执行？"
+		}
+    }
+  },
+  "dashboard" : {
+    "SANYLABEL" : "三一智能云平台",
+    "WELCOME" : "欢迎使用",
+    "WINDFARMCUT" : "风场数",
+    "TURBULENCECUT" : "总风机数",
+    "ELECPRODCNT" : "总发电量（MW·h）",
+    "RATEDPOWERCNT" : "总装机功率（MW）",
+    "PROFITCNT" : "总收益",
+    "PROFITCNTLABEL" : "{{year}}年发电产生总收益（亿）",
+    "FAULTSTATISTICS" : "故障统计图",
+    "FAULTSTATISTICSLABEL" : "近一个月的故障时间统计(单位：小时)",
+    "FAULTSTATISTICSFORMATTER" : "{a} <br/> {b} : {c} (小时)",
+    "FAULTTIME" : "故障时间",
+    "FAULTPIETEXT" : "故障率分布图",
+    "FAULTPIESUBTEXT" : "近一个月的故障时间和正常运行时间比例",
+    "FAULTRATE" : "故障率",
+    "RUNRATE" : "正常运行率",
+    "RUNFORMATTER" : "\n正常运行率",
+    "FAULTFORMATTER" : "{b} : {c}小时 ({d}%)",
+    "WINDFANPIETEXT" : "风机分布图",
+    "WINDFANPIESUBTEXT" : "各个风场的分机分配比例",
+    "WINDFANPIEFORMATTER" : "{b} : {c}台 ({d}%)",
+    "WINDFANCNT" : "风机数量",
+    "WINDRANKINGBARTEXT" : "发电量排名",
+    "WINDRANKINGBARSUBTEXT" : "近一个月的各风场发电量的排名",
+    "WINDRANKINGBARFORMATTER" : "{{name}}：第{{ranking}}名",
+    "WINDRANKINGBARNAME" : "排名",
+    "DOMAINNAME" : "三一管理域",
+    "SHOWPHOTOURL" : "img/b13.jpg"
+  },
+  "system" : {
+    "usermanage" : {
+      "UPDATEUSER" : "修改用户",
+      "ADDUSER" : "添加用户",
+      "USERNAME" : "用户名",
+      "REALNAME" : "真实姓名",
+      "CREATEDATA" : "真实姓名",
+      "POSITION" : "职位",
+      "OPERATION" : "操作",
+      "DEL" : "删除"
+    },
+    "rolemanage" : {
+      "UPDATEROLE" : "修改角色",
+      "ADDROLE" : "添加角色"
+    },
+    "domainmanage" : {
+      "UPDATEDOMAIN" : "修改域",
+      "ADDDOMAIN" : "添加域"
+    },
+    "systemConfig" : {
+      "ADDCONFIG" : "添加配置",
+      "UPDATECONFIG" : "更新配置"
+    }
+  },
+  "station" : {
+    "windFarm" : {
+      "ADDWINDFARM" : "添加风场",
+      "UPDATEWINDFARM" : "更新风场",
+      "IMPORTWINDFARM" : "导入风场",
+      "CHANGEPHOTOWARNING" : "风场图片更新后，请立即更新该风场风机坐标",
+      "EXPORTWINDFARM" : "导出风场"
+    },
+    "fan" : {
+      "ADDFAN" : "添加风机",
+      "UPDATEFAN" : "更新风机",
+      "IMPORTFAN" : "导入风机",
+      "UPDATELNGLAT" : "风机坐标设定",
+      "EXPORTFAN" : "导出风机"
+    }
+  },
+  "job" : {
+    "jobMaintain" : {
+      "ADDJOB" : "添加任务",
+      "UPDATEJOB" : "更新任务",
+      "JOBLOG" : "任务日志"
+    }
+  },
+  "analysis" : {
+    "energy" : {
+      "ADDENERGY" : "添加数据",
+      "UPDATEENERGY" : "更新数据"
+    },
+    "esaerstatisticsmanage" : {
+      "UPDATEESAERSTATISTICS" : "修改场站",
+      "ADDESAERSTATISTICS" : "添加场站",
+      "GENERATIONCHART" : "发电量柱形图",
+      "STATISTICSNAME" : "场站名",
+      "GENERATION" : "发电量（万kWh）",
+      "REDUCTIONSO2" : "减排SO2（万吨）",
+      "REDUCTIONCO2" : "减排CO2（万吨）",
+      "SAVEWATER" : "节约水（万吨）",
+      "SAVECOAL" : "节约煤（万吨）"
+    },
+    "operationstatisticsmanage" : {
+      "OPERATIONCHART" : "操作次数前10名用户分布图"
+    },
+    "rolemanage" : {
+      "UPDATEROLE" : "修改角色",
+      "ADDROLE" : "添加角色"
+    }
+  },
+  "alarm" : {
+    "equipalarm" : {
+      "TITLE" : "设备报警查询",
+      "LEVEL" : "报警等级",
+      "FARM" : "风场名称",
+      "FAN" : "风机名称",
+      "TIME" : "发生时间",
+      "STARTSEARCH" : "开始检索",
+      "ERRORCODE" : "报警码",
+      "FAULTCLASS" : "故障分类",
+      "DESC" : "故障描述",
+      "TO" : "至"
+    }
+  }
+}

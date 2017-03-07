@@ -1,0 +1,134 @@
+<div class="accordion">
+    <p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="accordion.status.open = !accordion.status.open">全部收起</button>
+        <button type="button" class="btn btn-default btn-sm" ng-click="accordion.status.isFirstDisabled = ! accordion.status.isFirstDisabled">锁定/解锁 首行</button>
+    </p>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-model="accordion.oneAtATime">一次仅能打开一个
+        </label>
+    </div>
+    <uib-accordion close-others="accordion.oneAtATime">
+        <div uib-accordion-group class="panel-default" heading="第一列" is-open="accordion.status.isFirstOpen" is-disabled="accordion.status.isFirstDisabled">
+            第一列
+        </div>
+        <div uib-accordion-group class="panel-default" heading="{{i.title}}" ng-repeat="i in accordiongroups">
+            {{i.content}}
+        </div>
+        <div uib-accordion-group class="panel-default" heading="动态添加内容">
+            <p>点击按钮可以自动添加下面的元素</p>
+            <button type="button" class="btn btn-default btn-sm" ng-click="accordion.addItem()">添加</button>
+            <div ng-repeat="item in accordion.items">{{item}}</div>
+        </div>
+        <div uib-accordion-group class="panel-danger" heading="其他样式">
+            <p>样式内容</p>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+        <div uib-accordion-group class="panel-default" is-open="status.open">
+            <uib-accordion-heading>
+                右边添加icon <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+            </uib-accordion-heading>
+
+            内容
+        </div>
+    </uib-accordion>
+</div>
+
+<div class="alert">
+
+    <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+
+</div>
+
+
+<div class="button">
+    <h4>多选</h4>
+    <pre>全部内容: {{checkModel}}</pre>
+    <pre>结果: {{checkResults}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="checkModel.A" uib-btn-checkbox>A</label>
+        <label class="btn btn-primary" ng-model="checkModel.B" uib-btn-checkbox>B</label>
+        <label class="btn btn-primary" ng-model="checkModel.C" uib-btn-checkbox>C</label>
+    </div>
+    <h4>单选</h4>
+    <pre>{{radioModel || 'null'}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'A'">A</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'B'">B</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'C'">C</label>
+    </div>
+</div>
+
+
+<div class="DatepickerPopup">
+    <pre>你选择的日期是:<em>{{dt | date:'fullDate' }}</em></pre>
+
+    <h4>选择日期</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt2" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>选择格式: <span class="muted-text"><em>{{altInputFormats[0]}}</em>)</span></label>
+            <select class="form-control" ng-model="format" ng-options="f for f in formats"></select>
+        </div>
+    </div>
+
+    <hr />
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">今天</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2016, 2, 14)">2016-02-14</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">清除</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+</div>
+<div class="Dropdown">
+
+    <div class="btn-group" uib-dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+            Button dropdown <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a>Action</a></li>
+            <li role="menuitem"><a>Another action</a></li>
+            <li role="menuitem"><a>Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a>Separated link</a></li>
+        </ul>
+    </div>
+
+    <!-- Split button -->
+    <div class="btn-group" uib-dropdown>
+        <button id="split-button" type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger" uib-dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only">Split button!</span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+            <li role="menuitem"><a >Action</a></li>
+            <li role="menuitem"><a >Another action</a></li>
+            <li role="menuitem"><a >Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a>Separated link</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="Modal">
+
+
+</div>

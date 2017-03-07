@@ -1,0 +1,116 @@
+{
+  "header" : {
+    "navbar" : {
+      "UPLOAD" : "Upload",
+      "lang" : {
+        "en" : "English",
+        "zh_CN" : "China"
+      },
+      "NOTIFICATIONS" : "Notifications"
+    }
+  },
+  "aside" : {
+    "nav" : {
+      "DASHBOARD" : "DashBoard",
+      "WINDSPACE" : "National wind map",
+      "STATION" : "Wind site",
+      "station" : {
+        "WINDFARMMAINTAIN" : "Wind farm",
+        "FANMAINTAIN" : "Wind turbine"
+      },
+      "ALARM" : "Device alarm",
+      "alarm" : {
+        "LIGHTWORDALARM" : "Optical word alarm",
+        "STOPLIST" : "Shutdown list",
+        "ABNORMALOUTPUT" : "Abnormal output",
+        "EQUIPALARM" : "Alarm sreach"
+      },
+      "MONITORING" : "Monitoring",
+      "monitoring" : {
+        "MOVICON" : "Movicon"
+      },
+      "BIGDATAREPOTRT" : "Big data report",
+      "bigdatarepotrt" : {
+        "REPORT5" : "Timing data comparison",
+        "REPORT4" : "Turbine power curve",
+        "REPORT3" : "Turbine performance curve",
+        "REPORT2" : "Turbine generation ranking",
+        "REPORT1" : "Performance of control system "
+      },
+      "ANALYSIS" : "Statistical",
+      "analysis" : {
+        "ENERGYANALYSIS" : "Energy",
+        "ESAERSTATISTICSMANAGE" : "Conserve energy",
+        "OPERATIONSTATISTICSMANAGE" : "Operation"
+      },
+      "JOB" : "Task",
+      "job" : {
+        "JOBMAINTAIN" : "Tasks",
+        "JOBHISTORY" : "Task history"
+      },
+      "CONFIG" : "Config",
+      "config" : {
+        "DICTIONARYMANAGE" : "Dictionary"
+      },
+      "SYSTEM" : "System",
+      "system" : {
+        "USERMANGE" : "Users",
+        "ROLEMANAGE" : "Roles",
+        "RESOURCEMANAGE" : "Resources",
+        "DOMAINMANAGE" : "Domains",
+        "SYSTEMCONFIG" : "System config",
+        "MULTILANGUAGE" : "Multi language"
+      },
+      "YOUR_STUFF" : "Your STUFF",
+      "your_stuff" : {
+        "YOUR_STUFF" : "Your STUFF",
+        "PROFILE" : "Profile",
+        "DOCUMENTS" : "Documents"
+      },
+      "MILESTONE" : "Annual generating rate",
+      "RELEASE" : "Monthly generation rate",
+      "HEADER" : "Cloud Platform"
+    }
+  },
+  "message" : {
+    "common" : {
+      "system" : {
+        "error" : "系统异常请联系管理员。"
+      },
+      "delMessage" : "是否确认删除？",
+      "saveSuccess" : "保存成功!",
+      "delSuccess" : "删除成功!",
+      "pattern" : "请按照{{val}}格式输入。",
+      "required" : "此项必须输入。",
+      "email" : "必须输入邮件格式",
+      "downloadMessage" : "是否确认下载？",
+      "downloadSuccess" : "下载成功",
+      "generateSuccess" : "生成文件成功",
+      "uploadSuccess" : "上传文件成功",
+      "imageSizeError" : "图片超过2M,请将压缩图片后上传。",
+      "validator" : "输入项目错误。",
+      "flushConfirm" : "确认是否需要立即生效吗？",
+      "flushCacheSuccess" : "立即生效成功。"
+    },
+    "job" : {
+      "jobmanage" : {
+        "timecheck" : "开始时间大于结束时间!",
+        "weekcheck" : "请选择任务执行星期",
+        "dayCheck" : "某些月份没有所选日期，该月可能不会执行任务!"
+      }
+    },
+    "system" : {
+      "usermanage" : {
+        "unlocked" : "是否确定解锁？",
+        "locked" : "是否确定加锁？",
+        "passwdreset" : "是否确认重置密码？",
+        "passwdresetSuccess" : "重置密码成功!",
+        "usernamepattern" : "必须输入 a-zA-Z0-9格式，4-10 长度",
+        "passwordError" : "两个密码不相同！"
+      },
+      "rolemanage" : {
+        "bindSuccess" : "邦定资源成功！"
+      }
+    }
+  }
+}
