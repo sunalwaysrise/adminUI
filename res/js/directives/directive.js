@@ -52,6 +52,20 @@ return {
         }
     }
 })
-
+.directive('dropdowntoggle',function ($rootScope,$window) {
+    return {
+        restrict: "EA",
+        link: function(scope, $el) {
+            $el.on('click',function (e) {
+                if($el.hasClass('open')){
+                    $('.dropdown').removeClass('open');
+                }else {
+                    $('.dropdown').removeClass('open');
+                    $el.addClass('open');
+                }
+            });
+        }
+    }
+})
 
 ;

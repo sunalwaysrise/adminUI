@@ -1,5 +1,5 @@
 'use strict';
-var adminUI = angular.module('sany', [
+var adminUI = angular.module('adminUI', [
     'ngAnimate',
     'ngCookies',
     'ngMessages',
@@ -10,6 +10,7 @@ var adminUI = angular.module('sany', [
     'ui.router',
     'chart.js',
     'ui.bootstrap',
+    'chart.js',
     'oc.lazyLoad',
     'toastr',
     'app.controllers',
@@ -34,10 +35,33 @@ adminUI
                 url: '/app',
                 templateUrl: "tpl/app.html"
             })
-            .state('app.index', {
-                url: '/index',
-                templateUrl: 'tpl/index/index.html',
-                controller: "index"
+            .state('app.bootstrap', {
+                url: '/bootstrap',
+                templateUrl: 'tpl/bootstrap/index.html',
+                controller: "bootstrap",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/bootstrap/bootstrap.js');
+                    }]
+                }
+            }).state('app.bootstraptip', {
+                url: '/bootstraptip',
+                templateUrl: 'tpl/bootstrap/tip.html',
+                controller: "bootstraptip",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/bootstrap/bootstraptip.js');
+                    }]
+                }
+            }).state('app.bootstrapmodel', {
+                url: '/bootstrapmodel',
+                templateUrl: 'tpl/bootstrap/model.html',
+                controller: "bootstrapmodel",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/bootstrap/bootstrapmodel.js');
+                    }]
+                }
             })
             .state('app.home', {
                 url: '/home',

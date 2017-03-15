@@ -1,0 +1,77 @@
+<div class="bootstrap">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="title-page">弹出框 <small>Popover</small></h1>
+            <div class="md30">
+                <h4>位置</h4>
+                <div class="form-group">
+                    <label>提示位置</label>
+                    <select class="form-control" ng-model="placement.selected" ng-options="o as o for o in placement.options"></select>
+                </div>
+                <button popover-placement="{{placement.selected}}" uib-popover="提示内容" popover-title="提示标题" type="button" class="btn btn-default">显示位置: {{placement.selected}}</button>
+                <hr />
+                <h4>触发方式</h4>
+                <p>
+                    <button uib-popover="鼠标进入时显示提示内容" popover-trigger="'mouseenter'" type="button" class="btn btn-default">Mouseenter</button>
+                </p>
+                <input type="text" value="点击" uib-popover="鼠标点击时显示提示内容"  popover-trigger="'focus'" class="form-control">
+                <hr />
+                <h4>其他</h4>
+                <button popover-animation="true" uib-popover="显示动画" type="button" class="btn btn-default">动画</button>
+                <button uib-popover="我有标题" popover-title="标题内容" type="button" class="btn btn-default">标题</button>
+                <button uib-popover="手动触发" popover-is-open="popoverIsOpen" ng-click="popoverIsOpen = !popoverIsOpen" type="button" class="btn btn-default">通过model控制显示</button>
+                <button uib-popover-html="htmlPopover" class="btn btn-default">HTML Popover</button>
+                <button uib-popover-html="'<b>HTML</b>, <i>inline</i>'" class="btn btn-default">HTML Popover (inline)</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1 class="title-page">工具提示 <small>Tooltip</small></h1>
+            <div class="mb30">
+                <h4>位置</h4>
+                <div class="form-group">
+                    <label>提示位置</label>
+                    <select class="form-control" ng-model="placement2.selected" ng-options="o as o for o in placement2.options"></select>
+                </div>
+                <button tooltip-placement="{{placement2.selected}}" uib-tooltip="工具提示" type="button" class="btn btn-default">Tooltip {{placement2.selected}}</button>
+                <p>
+                   文字中的使用如下列情况：
+                    <a tooltip-animation="false" uib-tooltip="提示内容">渐渐显示</a>、
+                    <a tooltip-popup-delay='1000' uib-tooltip='提示内容'>延迟显示</a>、
+                    <a tooltip-popup-close-delay='1000' uib-tooltip='提示内容'>延迟隐藏</a>、
+                    <a uib-tooltip-html="htmlTooltip">model中的提示内容</a><br/>、
+                    <a uib-tooltip-html="'后面的文字来自model:{{dynamicTooltipText}}'">model中的提示内容</a>、
+
+                    <style>
+                        /*实践中这部分代码放到自定义css文件中，禁止出现在 html文件中*/
+                        .tooltip.customClass .tooltip-inner {
+                            color: #880000;
+                            background-color: #ffff66;
+                            box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                        }
+                        .tooltip.customClass .tooltip-arrow {
+                            display: none;
+                        }
+                    </style>
+                    <a uib-tooltip="我的样式是自定义的" tooltip-class="customClass">自定义样式!</a>、
+
+                    <span uib-tooltip="由model控制是否触发!" tooltip-is-open="tooltipIsOpen" tooltip-placement="bottom">由model控制是否触发</span>
+                    <button ng-click="tooltipIsOpen = !tooltipIsOpen">手动提示</button>
+
+                </p>
+                <div class="form-group">
+                    <input type="text" placeholder="输入框获得焦点时给出提示" uib-tooltip="提示内容" tooltip-trigger="'focus'" tooltip-placement="top" class="form-control" />
+                </div>
+                <div class="form-group" ng-class="{'has-error' : !inputModel}">
+                    <input type="text" ng-model="inputModel" class="form-control"
+                           placeholder="鼠标经过有提示，除非写入内容"
+                           uib-tooltip="提示的内容"
+                           tooltip-placement="top"
+                           tooltip-trigger="'mouseenter'"
+                           tooltip-enable="!inputModel" />
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
