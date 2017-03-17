@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/3/15.
  */
 angular.module('app.controllers', []).controller('bootstraptip', function($scope, $sce) {
-
+    Pace.restart();
     $scope.placement = {
         options: [
             'top',

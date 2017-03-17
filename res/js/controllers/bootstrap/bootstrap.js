@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/3/14.
  */
 angular.module('app.controllers', []).controller('bootstrap', function($scope) {
+    Pace.restart();
     /**手风琴*/
     $scope.accordion={
         oneAtATime:true,

@@ -1,4 +1,8 @@
 'use strict';
+
+/* Services */
+
+// Define your services here if necessary
 var appServices = angular.module('app.services', []);
 
 /**

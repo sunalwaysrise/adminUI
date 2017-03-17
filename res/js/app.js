@@ -10,7 +10,6 @@ var adminUI = angular.module('adminUI', [
     'ui.router',
     'chart.js',
     'ui.bootstrap',
-    'chart.js',
     'oc.lazyLoad',
     'toastr',
     'app.controllers',
@@ -59,7 +58,7 @@ adminUI
                 controller: "bootstrapmodel",
                 resolve:{
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load('res/js/controllers/bootstrap/bootstrapmodel.js');
+                        return $ocLazyLoad.load('res/js/controllers/bootstrap/model.js');
                     }]
                 }
             })
@@ -76,7 +75,12 @@ adminUI
             .state('app.charts', {
                 url: '/charts',
                 templateUrl: 'tpl/index/charts.html',
-                controller: "charts"
+                controller: "charts",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/charts/charts.js');
+                    }]
+                }
             })
             .state('app.form1', {
                 url: '/form1',
