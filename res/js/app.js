@@ -52,13 +52,13 @@ adminUI
                         return $ocLazyLoad.load('res/js/controllers/bootstrap/bootstraptip.js');
                     }]
                 }
-            }).state('app.bootstrapmodel', {
-                url: '/bootstrapmodel',
-                templateUrl: 'tpl/bootstrap/model.html',
-                controller: "bootstrapmodel",
+            }).state('app.bootstrapmodal', {
+                url: '/bootstrapmodal',
+                templateUrl: 'tpl/bootstrap/modal.html',
+                controller: "bootstrapmodal",
                 resolve:{
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load('res/js/controllers/bootstrap/model.js');
+                        return $ocLazyLoad.load('res/js/controllers/bootstrap/modal.js');
                     }]
                 }
             })
@@ -69,12 +69,16 @@ adminUI
             })
             .state('app.widgets', {
                 url: '/widgets',
-                templateUrl: 'tpl/index/widgets.html',
-                controller: "widgets"
+                templateUrl: 'tpl/widgets/index.html',
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/widgets/widgets.js');
+                    }]
+                }
             })
             .state('app.charts', {
                 url: '/charts',
-                templateUrl: 'tpl/index/charts.html',
+                templateUrl: 'tpl/charts/charts.html',
                 controller: "charts",
                 resolve:{
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -84,19 +88,35 @@ adminUI
             })
             .state('app.form1', {
                 url: '/form1',
-                templateUrl: 'tpl/index/form1.html',
-                controller: "form1"
+                templateUrl: 'tpl/form/form1.html',
+                controller: "form1",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/form/form1.js');
+                    }]
+                }
             })
             .state('app.form2', {
                 url: '/form2',
-                templateUrl: 'tpl/index/form2.html',
-                controller: "form2"
+                templateUrl: 'tpl/form/form2.html',
+                controller: "form2",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/form/form2.js');
+                    }]
+                }
             })
             .state('app.form3', {
                 url: '/form3',
-                templateUrl: 'tpl/index/form3.html',
-                controller: "form3"
+                templateUrl: 'tpl/form/form3.html',
+                controller: "form3",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/form/form3.js');
+                    }]
+                }
             })
+
             .state('app.table1', {
                 url: '/table1',
                 templateUrl: 'tpl/index/table1.html',
@@ -124,6 +144,9 @@ adminUI
             });
     });
 var app = {
+        settings:{
+            colors:{"white":"#fff","black":"#000","gray-light":"#999","gray-lighter":"#eee","gray":"#666","gray-dark":"#343434","gray-darker":"#222","gray-semi-light":"#777","gray-semi-lighter":"#ddd","brand-primary":"#5d8fc2","brand-success":"#64bd63","brand-warning":"#f0b518","brand-danger":"#dd5826","brand-info":"#5dc4bf"}
+        },
         debug: true,
         screens: {
             'xs-max': 767,

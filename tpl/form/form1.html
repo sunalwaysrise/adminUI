@@ -1,0 +1,716 @@
+<ol class="breadcrumb">
+    <li>首页</li>
+    <li class="active">表单</li>
+</ol>
+<h1 class="page-title"><span class="fw-semi-bold">表单</span> 部分元素依赖于bootstrap指令</h1>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>基本元素</h5>
+                <div class="widget-controls widget-controls-hover"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+                        <legend>表单名称</legend>
+                        <div class="form-group">
+                            <label for="normal-field" class="col-sm-4 control-label">普通字段</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="normal-field" class="form-control" placeholder="普通字段">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hint-field" class="col-sm-4 control-label">
+                                普通字段加提示
+                                <span class="help-block">提示内容</span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" id="hint-field" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="tooltip-enabled">交互提示</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="tooltip-enabled" class="form-control" uib-tooltip="提示内容"  placeholder="Hover 有提示">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="disabled-input">禁止输入</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="disabled-input" class="form-control" disabled="disabled" value="禁止">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="max-length">限制三个字</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="max-length" maxlength="3" class="form-control" placeholder=""  uib-tooltip="最多可以输入3个字">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="prepended-input">前置Icon</label>
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input id="prepended-input" class="form-control" size="16" type="text" placeholder="Username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="password-field">前置Icon</label>
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password-field" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="appended-input">后置固定内容</label>
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <input id="appended-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="combined-input">前后加固定内容</label>
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <input id="combined-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="transparent-input">内含Icon</label>
+                            <div class="col-sm-7">
+                                <div class="input-group input-group-transparent">
+                                    <input id="transparent-input" class="form-control" type="text">
+                                    <span class="input-group-addon"><i class="fa fa-camera"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-7">
+                                <button type="submit" class="btn btn-primary">保存</button>
+                                <button type="button" class="btn btn-inverse">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>特殊输入元素</h5>
+                <div class="widget-controls">
+                    <a><i class="glyphicon glyphicon-cog"></i></a>
+                    <a><i class="fa fa-refresh"></i></a>
+                    <a><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <form role="form">
+                    <fieldset>
+                        <legend>表单 <strong>名称</strong></legend>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label for="search-input">搜索</label>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" id="search-input">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default">搜索</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bar">按钮</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="bar">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
+                                            <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
+                                            <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropdown-appended">下拉</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="dropdown-appended">
+                                        <div class="input-group-btn" uib-dropdown>
+                                                <button id="split-button" type="button" class="btn btn-danger">Action</button>
+                                                <button type="button" class="btn btn-danger" uib-dropdown-toggle>
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">Split button!</span>
+                                                </button>
+                                                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                                    <li ng-repeat="i in mu1" role="menuitem"><a >{{i}}</a></li>
+                                                    <li class="divider"></li>
+                                                    <li role="menuitem"><a>Separated link</a></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="segmented-dropdown">下拉</label>
+                                    <div class="input-group">
+                                        <input id="segmented-dropdown" class="form-control" type="text">
+                                        <div class="input-group-btn"  uib-dropdown>
+                                            <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                                                Button dropdown <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                                <li ng-repeat="i in mu1" role="menuitem"><a >{{i}}</a></li>
+                                                <li class="divider"></li>
+                                                <li role="menuitem"><a>Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="help-block">Anything can be appended to the right</span>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="no-borders-input">透明输入框</label>
+                                    <input id="no-borders-input" class="form-control input-no-border bg-gray-lighter" type="text" placeholder="Search Dashboard">
+                                    <p class="help-block">添加 <code>.bg-gray-lighter</code></p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-inverse">保存</button>
+                        <button type="button" class="btn btn-default">取消</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="col-md-8">
+        <section class="widget">
+            <header>
+                <h5>表单 <span class="fw-semi-bold">尺寸</span></h5>
+                <div class="widget-controls">
+                    <a class="bg-gray-transparent"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                    <a><i class="fa fa-refresh"></i></a>
+                    <a><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <form role="form">
+                    <fieldset>
+                        <legend>
+                            输入框尺寸
+                        </legend>
+                        <p>inputs、selects均可用</p>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder=".input-lg">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="default input">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder=".input-sm">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-4">
+        <section class="widget">
+            <header>
+                <h5>表单 <span class="fw-semi-bold">尺寸</span></h5>
+                <div class="widget-controls">
+                    <a class="bg-gray-transparent"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                    <a><i class="fa fa-refresh"></i></a>
+                    <a><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <form role="form">
+                    <fieldset>
+                        <legend>
+                            Input Groups
+                        </legend>
+                        <p>
+                            Different colors &amp; sizes for any elements including input groups. Elements may be
+                            easily styled with classes like <code>.bg-primary</code> or <code>.bg-transparent</code>
+                        </p>
+                        <br>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon bg-transparent"><i class="fa fa-github-alt"></i></span>
+                                <input class="form-control" size="16" type="text" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon"><i class="fa fa-bars"></i></span>
+                                <input class="form-control" size="16" type="text" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control" size="16" type="text" placeholder="City">
+                                <span class="input-group-addon bg-danger text-white"><i class="fa fa-code-fork"></i></span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>
+                    <i class="fa fa-font"></i>
+                    Textareas
+                </h5>
+                <div class="widget-controls">
+                    <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                    <a href="#"><i class="fa fa-refresh"></i></a>
+                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+                        <legend>Small form</legend>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="default-textarea">Default textarea</label>
+                            <div class="col-sm-9">
+                                <textarea rows="4" class="form-control" id="default-textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-sm-9">
+                                <div class="btn-toolbar">
+                                    <button type="button" class="btn btn-sm btn-default pull-right">Clear</button>
+                                    <button type="button" class="btn btn-sm btn-danger pull-right">Save</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dropdown based colored selects</legend>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="simple-select">Simple select</label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" style="display: none;">
+                                    <option value="0">Option One</option>
+                                    <option value="1">Option Two</option>
+                                    <option value="2">Option Three</option>
+                                </select><div class="btn-group bootstrap-select" style="width: 121px;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="simple-select" tabindex="-1" title="Option One"><span class="filter-option pull-left">Option One</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Option One</span>" data-tokens="null"><span class="text">Option One</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Option Two</span>" data-tokens="null"><span class="text">Option Two</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Option Three</span>" data-tokens="null"><span class="text">Option Three</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                                <span class="help-block">Auto size</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="simple-red-select">
+                                Colored ones
+                                <span class="help-block">
+                                            A bit of Japanese
+                                        </span>
+                            </label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker" data-style="btn-danger btn-sm" data-width="auto" tabindex="-1" id="simple-red-select" style="display: none;">
+                                    <option value="0">Ichi</option>
+                                    <option value="1">Ni</option>
+                                    <option value="2">San</option>
+                                </select><div class="btn-group bootstrap-select" style="width: 64px;"><button type="button" class="btn dropdown-toggle btn-danger btn-sm" data-toggle="dropdown" data-id="simple-red-select" tabindex="-1" title="Ichi"><span class="filter-option pull-left">Ichi</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ichi</span>" data-tokens="null"><span class="text">Ichi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ni</span>" data-tokens="null"><span class="text">Ni</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>San</span>" data-tokens="null"><span class="text">San</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                                <select class="selectpicker" data-style="btn-warning btn-sm" data-width="auto" tabindex="-1" id="simple-orange-select" style="display: none;">
+                                    <option value="0">Shi</option>
+                                    <option value="1">Go</option>
+                                    <option value="2">Roku</option>
+                                </select><div class="btn-group bootstrap-select" style="width: 72px;"><button type="button" class="btn dropdown-toggle btn-warning btn-sm" data-toggle="dropdown" data-id="simple-orange-select" tabindex="-1" title="Shi"><span class="filter-option pull-left">Shi</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Shi</span>" data-tokens="null"><span class="text">Shi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Go</span>" data-tokens="null"><span class="text">Go</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Roku</span>" data-tokens="null"><span class="text">Roku</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                                <select class="selectpicker" data-style="btn-success btn-sm" data-width="auto" tabindex="-1" id="simple-green-select" style="display: none;">
+                                    <option value="0">Hichi</option>
+                                    <option value="1">Hachi</option>
+                                    <option value="2">Ku</option>
+                                    <option value="3">Ju</option>
+                                </select><div class="btn-group bootstrap-select" style="width: 75px;"><button type="button" class="btn dropdown-toggle btn-success btn-sm" data-toggle="dropdown" data-id="simple-green-select" tabindex="-1" title="Hichi"><span class="filter-option pull-left">Hichi</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hichi</span>" data-tokens="null"><span class="text">Hichi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hachi</span>" data-tokens="null"><span class="text">Hachi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ku</span>" data-tokens="null"><span class="text">Ku</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ju</span>" data-tokens="null"><span class="text">Ju</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="simple-big-select">
+                                Big One
+                                <span class="help-block">
+                                            Size can be controlled with <code>.btn-lg</code> &amp; <code>.btn-sm</code>
+                                        </span>
+                            </label>
+                            <div class="col-sm-8">
+                                <select class="selectpicker" data-style="btn-default btn-lg" tabindex="-1" id="simple-big-select" style="display: none;">
+                                    <option value="0">Fourth Item</option>
+                                    <option value="1">Fifth Item</option>
+                                    <option value="2">Sixth item</option>
+                                </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default btn-lg" data-toggle="dropdown" data-id="simple-big-select" tabindex="-1" title="Fourth Item"><span class="filter-option pull-left">Fourth Item</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Fourth Item</span>" data-tokens="null"><span class="text">Fourth Item</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Fifth Item</span>" data-tokens="null"><span class="text">Fifth Item</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Sixth item</span>" data-tokens="null"><span class="text">Sixth item</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget">
+            <header>
+                <h5>
+                    Checkbox <strong>Controls</strong>
+                </h5>
+                <div class="widget-controls">
+                    <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                    <a href="#"><i class="fa fa-refresh"></i></a>
+                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+
+            <div class="widget-body">
+                <div class="row">
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>
+                            Basic
+                        </legend>
+                        <p>
+                            Supports bootstrap brand colors: <code>.checkbox-primary</code>, <code>.checkbox-info</code> etc.
+                            Pure <abbr title="Cascading Style Sheet">css</abbr> solution with no javascript.
+                            Let your checkboxes shine!
+                        </p>
+                        <div class="checkbox">
+                            <input id="checkbox1" type="checkbox">
+                            <label for="checkbox1">
+                                Default
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox2" type="checkbox" checked="">
+                            <label for="checkbox2">
+                                Primary
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-success">
+                            <input id="checkbox3" type="checkbox">
+                            <label for="checkbox3">
+                                Success
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-info">
+                            <input id="checkbox4" type="checkbox" checked="">
+                            <label for="checkbox4">
+                                Info
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-warning">
+                            <input id="checkbox5" type="checkbox">
+                            <label for="checkbox5">
+                                Warning
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-danger">
+                            <input id="checkbox6" type="checkbox" checked="">
+                            <label for="checkbox6">
+                                Check me out
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>
+                            Circled
+                        </legend>
+                        <p>
+                            <code>.checkbox-circle</code> for roundness. No more sad controls controls.
+                            Check out this brand-new rounded checkboxes!
+                        </p>
+                        <div class="checkbox checkbox-circle">
+                            <input id="checkbox7" type="checkbox">
+                            <label for="checkbox7">
+                                Simply Rounded
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-info checkbox-circle">
+                            <input id="checkbox8" type="checkbox" checked="">
+                            <label for="checkbox8">
+                                Me too
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>
+                            Disabled
+                        </legend>
+                        <p>
+                            Disabled state also supported. Full stack checkbox functionality.
+                        </p>
+                        <div class="checkbox">
+                            <input id="checkbox9" type="checkbox" disabled="">
+                            <label for="checkbox9">
+                                Can't check this
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-success">
+                            <input id="checkbox10" type="checkbox" disabled="" checked="">
+                            <label for="checkbox10">
+                                This too
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-warning checkbox-circle">
+                            <input id="checkbox11" type="checkbox" disabled="" checked="">
+                            <label for="checkbox11">
+                                And this
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h5>
+                    Radio <strong>Controls</strong>
+                </h5>
+                <div class="widget-controls">
+                    <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                    <a href="#"><i class="fa fa-refresh"></i></a>
+                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <fieldset>
+                                <legend>
+                                    Basic
+                                </legend>
+                                <p>
+                                    Supports bootstrap brand colors: <code>.radio-primary</code>, <code>.radio-danger</code> etc.
+                                    Pure css solution with no javascript. Let your radios shine!
+                                </p>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="radio">
+                                            <input type="radio" name="radio1" id="radio1" value="option1" checked="">
+                                            <label for="radio1">
+                                                Small
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio1" id="radio2" value="option2">
+                                            <label for="radio2">
+                                                Big
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="radio radio-danger">
+                                            <input type="radio" name="radio2" id="radio3" value="option1">
+                                            <label for="radio3">
+                                                Next
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-danger">
+                                            <input type="radio" name="radio2" id="radio4" value="option2" checked="">
+                                            <label for="radio4">
+                                                One
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                            <fieldset>
+                                <legend>
+                                    Disabled
+                                </legend>
+                                <p>
+                                    Disabled state also supported. Full stack radios functionality.
+                                </p>
+                                <div class="radio">
+                                    <input type="radio" name="radio3" id="radio5" value="option1" disabled="">
+                                    <label for="radio5">
+                                        Next
+                                    </label>
+                                </div>
+                                <div class="radio radio-warning">
+                                    <input type="radio" name="radio3" id="radio6" value="option2" checked="" disabled="">
+                                    <label for="radio6">
+                                        One
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                            <fieldset>
+                                <legend>
+                                    Cool iOS-like switches
+                                </legend>
+                                <p>
+                                    Simple component that helps you turn your default HTML checkbox inputs into
+                                    beautiful iOS 7 style switches in just few simple steps.
+                                </p>
+                                <div class="checkbox-inline checkbox-ios">
+                                    <label for="checkbox-ios1">
+                                        <input type="checkbox" id="checkbox-ios1" checked="" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 15.5px inset; transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;"><small style="left: 20px; background-color: rgb(255, 255, 255); transition: background-color 0.4s, left 0.2s;"></small></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline checkbox-ios">
+                                    <label for="checkbox-ios2">
+                                        <input type="checkbox" id="checkbox-ios2" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;"><small style="left: 0px; transition: background-color 0.4s, left 0.2s;"></small></span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h5>
+                    Sliders
+                </h5>
+                <div class="widget-controls">
+                    <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                    <a href="#"><i class="fa fa-refresh"></i></a>
+                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>Color Options</h4>
+                        <p>Sing extends Bootstrap Slider and provides different color options:</p>
+                        <form>
+                            <div class="mb-sm">
+                                <div class="slider slider-horizontal" id="ex1Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 40%;"></div><div class="slider-track-high" style="right: 0px; width: 60%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 40%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" style="left: 40%; margin-left: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">8</div></div><div class="tooltip tooltip-min top" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max top" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex1" data-slider-id="ex1Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" data-value="8" value="8" style="display: none;">
+                            </div>
+                            <div class="slider-danger mb-sm">
+                                <div class="slider slider-horizontal" id="ex2Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 90%;"></div><div class="slider-track-high" style="right: 0px; width: 10%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 90%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" style="left: 90%; margin-left: -14.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">18</div></div><div class="tooltip tooltip-min top"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" style="top: 18px;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex2" data-slider-id="ex2Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18" data-value="18" value="18" style="display: none;">
+                            </div>
+                            <div class="slider-warning mb-sm">
+                                <div class="slider slider-horizontal" id="ex3Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 35%;"></div><div class="slider-track-high" style="right: 0px; width: 65%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 35%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" style="left: 35%; margin-left: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">7</div></div><div class="tooltip tooltip-min top" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" style="top: 18px; display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex3" data-slider-id="ex3Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7" data-value="7" value="7" style="display: none;">
+                            </div>
+                            <div class="slider-success mb-sm">
+                                <div class="slider slider-horizontal" id="ex4Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 55%;"></div><div class="slider-track-high" style="right: 0px; width: 45%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 55%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" style="left: 55%; margin-left: -15px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">11</div></div><div class="tooltip tooltip-min top" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" style="top: 18px; display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex4" data-slider-id="ex4Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11" data-value="11" value="11" style="display: none;">
+                            </div>
+                            <div class="slider-inverse mb-sm">
+                                <div class="slider slider-horizontal" id="ex5Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 20%;"></div><div class="slider-track-high" style="right: 0px; width: 80%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 20%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" style="left: 20%; margin-left: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">4</div></div><div class="tooltip tooltip-min top" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bottom" style="top: 18px; display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex5" data-slider-id="ex5Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4" data-value="4" value="4" style="display: none;">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Slider Orientation</h4>
+                        <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
+                            attribute does the thing.</p>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                        <span class="">
+                                    <div class="slider slider-vertical" id="ex6Slider"><div class="slider-track"><div class="slider-track-low" style="top: 0px; height: 0%;"></div><div class="slider-selection" style="top: 0%; height: 70%;"></div><div class="slider-track-high" style="bottom: 0px; height: 30%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="top: 70%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="top: 0%;"></div></div><div class="tooltip tooltip-main right" style="left: 100%; top: 70%; margin-top: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">14</div></div><div class="tooltip tooltip-min right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex6" data-slider-orientation="vertical" data-slider-id="ex6Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" data-value="14" value="14" style="display: none;">
+                                </span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="slider-inverse">
+                                    <div class="slider slider-vertical" id="ex7Slider"><div class="slider-track"><div class="slider-track-low" style="top: 0px; height: 0%;"></div><div class="slider-selection" style="top: 0%; height: 90%;"></div><div class="slider-track-high" style="bottom: 0px; height: 10%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="top: 90%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="top: 0%;"></div></div><div class="tooltip tooltip-main right" style="left: 100%; top: 90%; margin-top: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">18</div></div><div class="tooltip tooltip-min right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex7" data-slider-orientation="vertical" data-slider-id="ex7Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18" data-value="18" value="18" style="display: none;">
+                                </span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="">
+                                    <div class="slider slider-vertical" id="ex8Slider"><div class="slider-track"><div class="slider-track-low" style="top: 0px; height: 0%;"></div><div class="slider-selection" style="top: 0%; height: 35%;"></div><div class="slider-track-high" style="bottom: 0px; height: 65%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="top: 35%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="top: 0%;"></div></div><div class="tooltip tooltip-main right" style="left: 100%; top: 35%; margin-top: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">7</div></div><div class="tooltip tooltip-min right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex8" data-slider-orientation="vertical" data-slider-id="ex8Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7" data-value="7" value="7" style="display: none;">
+                                </span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="slider-inverse">
+                                    <div class="slider slider-vertical" id="ex9Slider"><div class="slider-track"><div class="slider-track-low" style="top: 0px; height: 0%;"></div><div class="slider-selection" style="top: 0%; height: 55%;"></div><div class="slider-track-high" style="bottom: 0px; height: 45%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="top: 55%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="top: 0%;"></div></div><div class="tooltip tooltip-main right" style="left: 100%; top: 55%; margin-top: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">11</div></div><div class="tooltip tooltip-min right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex9" data-slider-orientation="vertical" data-slider-id="ex9Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11" data-value="11" value="11" style="display: none;">
+                                </span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class="">
+                                    <div class="slider slider-vertical" id="ex10Slider"><div class="slider-track"><div class="slider-track-low" style="top: 0px; height: 0%;"></div><div class="slider-selection" style="top: 0%; height: 20%;"></div><div class="slider-track-high" style="bottom: 0px; height: 80%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="top: 20%;"></div><div class="slider-handle max-slider-handle round hide" tabindex="0" style="top: 0%;"></div></div><div class="tooltip tooltip-main right" style="left: 100%; top: 20%; margin-top: -11.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">4</div></div><div class="tooltip tooltip-min right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max right" style="left: 100%;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><input class="js-slider" id="slider-ex10" data-slider-orientation="vertical" data-slider-id="ex10Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4" data-value="4" value="4" style="display: none;">
+                                </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Range Selector</h4>
+                        <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
+                            an array. Price range selector:</p>
+                        <form>
+                                <span class="slider-warning">
+                                    <div class="slider slider-horizontal" id="ex11Slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 10%;"></div><div class="slider-selection" style="left: 10%; width: 67.35%;"></div><div class="slider-track-high" style="right: 0px; width: 22.65%;"></div><div class="slider-handle min-slider-handle round" tabindex="0" style="left: 10%;"></div><div class="slider-handle max-slider-handle round" tabindex="0" style="left: 77.35%;"></div></div><div class="tooltip tooltip-main top" style="left: 43.675%; margin-left: -36.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">200 : 1547</div></div><div class="tooltip tooltip-min top" style="left: 10%; margin-left: -18px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">200</div></div><div class="tooltip tooltip-max top" style="left: 77.35%; margin-left: -21.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">1547</div></div></div><input class="js-slider" id="slider-ex11" data-slider-id="ex11Slider" type="text" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[200,1547]" data-value="200,1547" value="200,1547" style="display: none;">
+                                </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+

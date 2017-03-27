@@ -66,6 +66,64 @@ return {
             });
         }
     }
-})
+}).directive('liveTile', ['scriptLoader', function(scriptLoader){
+    return {
+        restrict: 'C',
+        link: function (scope, $el, attrs){
+            function render(){
+                $el.css('height', attrs.height).liveTile();
+                // remove onResize timeouts if present
+                scope.$on('$stateChangeStart', function(){
+                    $el.liveTile("destroy", true);
+                });
+            }
+            scriptLoader.loadScripts(['libs/MetroJS/release/MetroJs.Full/MetroJs.js'])
+                .then(render)
+        }
+    }
+}])
 
-;
+.directive('bootstrapCalendar', ['scriptLoader',function(scriptLoader){
+    return {
+        restrict: 'A',
+        link: function(scope, $el, attrs){
+            function render(){
+                var monthNames = ["一月", "二月", "三月", "四月", "五月", "六月",  "七月", "八月", "九月", "十月", "十一月", "十二月"];
+                var dayNames = ["日", "一", "二", "三", "四", "五", "六"];
+                var events = scope.$eval(attrs.events);
+                var $calendar = $el;
+                $calendar.calendar({
+                    months: monthNames,
+                    days: dayNames,
+                    events: events,
+                    popover_options:{
+                        placement: 'top',
+                        html: true
+                    }
+                });
+                $calendar.find('.icon-arrow-left').addClass('fa fa-arrow-left');
+                $calendar.find('.icon-arrow-right').addClass('fa fa-arrow-right');
+                function restyleCalendar(){
+                    $calendar.find('.event').each(function(){
+                        var $this = $(this),
+                            $eventIndicator = $('<span></span>');
+                        $eventIndicator.css('background-color', $this.css('background-color')).appendTo($this.find('a'));
+                        $this.css('background-color', '');
+                    })
+                }
+                $calendar.find('.icon-arrow-left, .icon-arrow-right').parent().on('click', restyleCalendar);
+                restyleCalendar();
+            }
+
+            scriptLoader.loadScripts([
+                'libs/bootstrap_calendar/bootstrap_calendar/js/bootstrap_calendar.min.js'
+            ])
+                .then(function(){
+                    attrs.$observe('events', function(){
+                        render();
+                    })
+                })
+        }
+    }
+}]);
+

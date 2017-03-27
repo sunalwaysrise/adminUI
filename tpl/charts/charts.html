@@ -1,0 +1,106 @@
+<ol class="breadcrumb">
+    <li>首页</li>
+    <li class="active">图表</li>
+</ol>
+<h1 class="page-title">chart.js - <span class="fw-semi-bold">Charts</span></h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>柱状</h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="bar" class="chart chart-bar" chart-data="bar_data" chart-labels="bar_labels" chart-dataset-override="bar_override"></canvas>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>折线</h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="line" class="chart chart-line" chart-data="line_data" chart-labels="line_labels" chart-options="line_options" chart-dataset-override="line_override" chart-click="line_click"></canvas>
+            </div>
+        </section>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <section class="widget">
+            <header>
+                <h5>饼图</h5>
+                <div class="widget-controls widget-controls-hover"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="pie" class="chart chart-pie" chart-data="pie_data" chart-labels="pie_labels" chart-dataset-override="pie_override"></canvas>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section class="widget">
+            <header>
+                <h5>饼图</h5>
+                <div class="widget-controls widget-controls-hover"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="doughnut_data" chart-labels="doughnut_labels" chart-dataset-override="doughnut_override"></canvas>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section class="widget">
+            <header>
+                <h5>雷达图</h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="radar" class="chart chart-radar" chart-data="radar_data" chart-dataset-override="radar_override" chart-labels="radar_labels"></canvas>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>横向柱状图</h5>
+                <div class="widget-controls widget-controls-hover"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="horizontal" class="chart chart-horizontal-bar" chart-data="horizontal_data" chart-labels="horizontal_labels" chart-dataset-override="horizontal_override"></canvas>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-6">
+        <section class="widget">
+            <header>
+                <h5>气泡图</h5>
+            </header>
+            <div class="widget-body">
+                <canvas id="bubble" class="chart-bubble" chart-data="bubble_data"></canvas>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h5>混合</h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <canvas id="base" class="chart-bar" chart-data="mixed_data" chart-labels="mixed_labels" chart-colors="mixed_colors" chart-dataset-override="mixed_override" >
+                </canvas>
+            </div>
+        </section>
+    </div>
+</div>
+

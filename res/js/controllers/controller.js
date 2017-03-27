@@ -35,9 +35,40 @@ appControllers
     })
 
     .controller('home', function($scope, $http, $location, toastr) {
+            var now = new Date(),
+            month = now.getMonth() + 1,
+            year = now.getFullYear();
 
-    })
-    .controller('widgets', function($scope, $http, $location, toastr) {
+
+            $scope.calendar_event=[
+                [
+                    '2/'+month+'/'+year,
+                    '待办事项',
+                    '#',
+                    app.settings.colors['brand-primary'],
+                    '出差报销'
+                ],
+                [
+                    '5/'+month+'/'+year,
+                    '紧急任务',
+                    '#',
+                    app.settings.colors['brand-warning'],
+                    '处理系统提交的BUG'
+                ],
+                [
+                    '18/'+month+'/'+year,
+                    '日程安排',
+                    '#',
+                    app.settings.colors['brand-success'],
+                    '出差'
+                ],
+                [
+                    '29/'+month+'/'+year,
+                    '链接',
+                    'https://www.wenbin.lu',
+                    app.settings.colors['brand-danger']
+                ]
+            ];
     })
 
     .controller('form1', function($scope, $http, $location, toastr) {

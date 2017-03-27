@@ -2,27 +2,36 @@
  * Created by Administrator on 2017/3/15.
  */
 'use strict';
-angular.module('app.controllers', []).controller('charts', function($scope, $http, $location,$timeout,scriptLoader, toastr) {
+angular.module('app.controllers', []).controller('charts', function($scope, $http, $location,$timeout,$interval,toastr) {
+    Pace.restart();
 
-    //demo
-    // 'chart.js'
-    // $scope.loadBootstrap = function(){
-    //     $ocLazyLoad.load([
-    //         'bower_components/chart.js/dist/Chart.min.js',
-    //         'bower_components/angular-chart.js/dist/angular-chart.min.js'
-    //     ])
-    // }
-    $scope.labels0 = ["January", "February", "March", "April", "May", "June", "July"];
-    $scope.series0 = ['Series A', 'Series B'];
-    $scope.data0 = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+    $scope.bar_labels=[ '2012','2013','2014','2015','2016','2017'];
+    $scope.bar_data=[
+        [65, 59, 80, 81, 56, 55],
+        [28, 48, 40, 19, 86, 90]
     ];
-    $scope.onClick = function (points, evt) {
-        // console.log(points, evt);
-    };
-    $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-    $scope.options = {
+    $scope.bar_override=[
+        {
+            label:"A",
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        },
+        {
+            label:"B",
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor:'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }
+    ];
+
+
+    $scope.line_labels=[ '2012','2013','2014','2015','2016','2017'];
+    $scope.line_data=[
+        [65, 59, 80, 81, 56, 55],
+        [28, 48, 40, 19, 86, 90]
+    ];
+    $scope.line_options = {
         scales: {
             yAxes: [
                 {
@@ -40,42 +49,161 @@ angular.module('app.controllers', []).controller('charts', function($scope, $htt
             ]
         }
     };
-
-
-    $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-    $scope.series = ['Series A', 'Series B'];
-    $scope.data = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+    $scope.line_override=[
+        {
+            label:"甲",
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1,
+            yAxisID: 'y-axis-1'
+        },
+        {
+            label:"乙",
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor:'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+            yAxisID: 'y-axis-2'
+        }
     ];
-    $timeout(function () {
-        $scope.data = [
-            [165, 159, 80, 81, 156, 55, 40],
-            [28, 48, 140, 19, 86, 127, 90]
-        ];
-        $scope.data2 = [
-            400, 300, 100, 60
-        ];
-        $scope.labels2 = ["北京", "上海", "杭州", "深圳"];
-    },3000)
 
-    $scope.labels2 = ["北京", "上海","杭州"];
-    $scope.data2 = [300, 500, 100];
+    $scope.line_click = function (points, evt) {
+        console.log(points, evt);
+    };
 
-    $scope.labels3 =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
-    $scope.options3={ colors : [ '#ff0000']};
-    $scope.data3 = [
+
+
+
+
+
+    $scope.pie_labels = ["北京", "上海","杭州"];
+    $scope.pie_data = [300, 500, 100];
+    $scope.pie_override={
+        backgroundColor: [
+            "rgba(255,99,132,.85)",
+            "rgba(54,162,235,.85)",
+            "rgba(255,206,86,.85)"
+        ],
+        hoverBackgroundColor: [
+            "rgba(255,99,132,1)",
+            "rgba(54,162,235,1)",
+            "rgba(255,206,86,1)"
+        ],
+        borderWidth:1,
+        hoverBorderWidth:2
+    };
+
+
+    $scope.doughnut_labels = ["北京", "上海","杭州"];
+    $scope.doughnut_data = [700, 500, 300];
+    $scope.doughnut_override={
+        backgroundColor: [
+            "rgba(255,99,132,.85)",
+            "rgba(54,162,235,.85)",
+            "rgba(255,206,86,.85)"
+        ],
+        hoverBackgroundColor: [
+            "rgba(255,99,132,1)",
+            "rgba(54,162,235,1)",
+            "rgba(255,206,86,1)"
+        ],
+        borderWidth:1,
+        hoverBorderWidth:2
+    };
+
+    $scope.radar_labels=["非常好","很好","一般", "非常差","很差","差"];
+    $scope.radar_data=[
         [65, 59, 90, 81, 56, 55, 40],
         [28, 48, 40, 19, 96, 27, 100]
     ];
-
-    $scope.colors4 = ['#45b7cd', '#ff6384', '#ff8e72'];
-    $scope.labels4 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    $scope.data4 = [
-        [65, -59, 80, 81, -56, 55, -40],
-        [28, 48, -40, 19, 86, 27, 90]
+    $scope.radar_override=[
+        {
+            label:"A",
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        },
+        {
+            label:"B",
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor:'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }
     ];
-    $scope.datasetOverride4 = [
+
+
+
+
+
+    $scope.horizontal_labels=[ '2012','2013','2014','2015','2016','2017'];
+    $scope.horizontal_data=[
+        [65, 59, 80, 81, 56, 55],
+        [28, 48, 40, 19, 86, 90]
+    ];
+    $scope.horizontal_override=[
+        {
+            label:"A",
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+        },
+        {
+            label:"B",
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor:'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }
+    ];
+
+
+
+
+    $scope.bubble_series = [];
+    $scope.bubble_options = {
+        scales: {
+            xAxes: [{
+                display: false,
+                ticks: {
+                    max: 125,
+                    min: -125,
+                    stepSize: 10
+                }
+            }],
+            yAxes: [{
+                display: false,
+                ticks: {
+                    max: 125,
+                    min: -125,
+                    stepSize: 10
+                }
+            }]
+        }
+    };
+    $scope.bubble_data = [];
+    for (var i = 0; i < 50; i++) {
+        $scope.bubble_data.push([{
+            x: randomScalingFactor(),
+            y: randomScalingFactor(),
+            r: randomRadius()
+        }]);
+    }
+
+    function randomScalingFactor () {
+        return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+    }
+    function randomRadius () {
+        return Math.abs(randomScalingFactor()) / 4;
+    }
+
+
+
+
+    $scope.mixed_colors = ['#45b7cd', '#ff6384', '#ff8e72'];
+    $scope.mixed_labels = ['1/3', '2/3', '3/3', '4/3', '5/3', '6/3', '7/3','8/3','9/3','10/3','11/3'];
+    $scope.mixed_data = [
+        [65, -59, 80, 81, -56, 55, -40, 81, -56, 55, -40],
+        [28, 48, -40, 19, 86, 27, 90, 19, 86, 27, 90]
+    ];
+    $scope.mixed_override = [
         {
             label: "Bar chart",
             borderWidth: 1,
@@ -83,7 +211,7 @@ angular.module('app.controllers', []).controller('charts', function($scope, $htt
         },
         {
             label: "Line chart",
-            borderWidth: 3,
+            borderWidth: 1,
             hoverBackgroundColor: "rgba(255,99,132,0.4)",
             hoverBorderColor: "rgba(255,99,132,1)",
             type: 'line'
@@ -91,61 +219,5 @@ angular.module('app.controllers', []).controller('charts', function($scope, $htt
     ];
 
 
-
-
-    // $scope.data1 = [
-    //     [1, 20],
-    //     [2, 20],
-    //     [3, 40],
-    //     [4, 30],
-    //     [5, 40],
-    //     [6, 35],
-    //     [7, 47]
-    // ];
-    // $scope.data2 = [
-    //     [1, 13],
-    //     [2, 8],
-    //     [3, 17],
-    //     [4, 10],
-    //     [5, 17],
-    //     [6, 15],
-    //     [7, 16]
-    // ];
-    // $scope.data3 = [
-    //     [1, 23],
-    //     [2, 13],
-    //     [3, 33],
-    //     [4, 16],
-    //     [5, 32],
-    //     [6, 28],
-    //     [7, 31]
-    // ];
-    //
-    // $scope.applyRickshawData = function(){
-    //     $scope.seriesData = [ [], [] ];
-    //     $scope.random = new Rickshaw.Fixtures.RandomData(30);
-    //
-    //     for (var i = 0; i < 30; i++) {
-    //         $scope.random.addData($scope.seriesData);
-    //     }
-    //     $scope.series = [
-    //         {
-    //             color: '#96E593',
-    //             data: $scope.seriesData[0],
-    //             name: 'Uploads'
-    //         }, {
-    //             color: '#ecfaec',
-    //             data: $scope.seriesData[1],
-    //             name: 'Downloads'
-    //         }
-    //     ];
-    // };
-    // scriptLoader.loadScripts([
-    //     'res/vendor/d3/d3.min.js',
-    //     'res/vendor/rickshaw/rickshaw.min.js'
-    // ])
-    //     .then(function(){
-    //         $scope.applyRickshawData()
-    //     });
 
 });
