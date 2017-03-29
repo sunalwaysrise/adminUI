@@ -33,7 +33,6 @@ appControllers
 
         };
     })
-
     .controller('home', function($scope, $http, $location, toastr) {
             var now = new Date(),
             month = now.getMonth() + 1,
@@ -71,16 +70,6 @@ appControllers
             ];
     })
 
-    .controller('form1', function($scope, $http, $location, toastr) {
-    })
-    .controller('form2', function($scope, $http, $location, toastr) {
-    })
-    .controller('form3', function($scope, $http, $location, toastr) {
-    })
-    .controller('table1', function($scope, $http, $location, toastr) {
-    })
-    .controller('table2', function($scope, $http, $location, toastr) {
-    })
     .controller('invoice', function($scope, $http, $location, toastr) {
     })
     .controller('grid', function($scope, $http, $location, toastr) {

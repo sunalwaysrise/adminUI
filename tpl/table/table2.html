@@ -1,0 +1,51 @@
+<ol class="breadcrumb">
+    <li>首页</li>
+    <li class="active">动态表格</li>
+</ol>
+<h1 class="page-title">表格 - 依赖<a href="http://ui-grid.info/" target="_blank">ui-grid</a>,需要注入模块 <code>'ui.grid'</code></h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h4>动态表格 </h4>
+                <p>使用选择列表需要注入模块 <code>'ui.grid.selection'</code></p>
+            </header>
+            <div class="widget-body">
+                <div class="gridStyle" ui-grid="gridOptions" ui-grid-resize-columns ui-grid-selection></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h4>分页</h4>
+                <p>使用选择列表需要注入模块 <code>'ui.grid.pagination'</code></p>
+            </header>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-success" ng-click="toggleMultiSelect()">Toggle multiSelect</button>  <strong>MultiSelect:</strong> <span ng-bind="gridApi.grid.options.multiSelect"></span>
+                        <button type="button" class="btn btn-success" ng-click="toggleRow1()">Toggle Row 0</button>
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-success" ng-click="toggleModifierKeysToMultiSelect()">Toggle modifierKeysToMultiSelect</button>  <strong>ModifierKeysToMultiSelect:</strong> <span ng-bind="gridApi.grid.options.modifierKeysToMultiSelect"> </span>
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-success" ng-disabled="!gridApi.grid.options.multiSelect" ng-click="selectAll()">Select All</button>
+                        <button type="button" class="btn btn-success" ng-click="clearAll()">Clear All</button>
+                        <button type="button" class="btn btn-success" ng-click="setSelectable()">Set Selectable</button>
+                        <button type="button" class="btn btn-success" ng-click="toggleFullRowSelection()">Toggle full row selection</button>
+                        <br/>
+                    </div>
+                </div>
+                <div ui-grid="gridOptions1" ui-grid-selection ui-grid-pagination class="grid"></div>
+            </div>
+
+        </section>
+    </div>
+</div>
+

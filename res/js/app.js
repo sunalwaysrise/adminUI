@@ -8,6 +8,9 @@ var adminUI = angular.module('adminUI', [
     'ngTouch',
     'ngStorage',
     'ui.router',
+    'ui.grid',
+    'ui.grid.selection',
+    'ui.grid.pagination',
     'chart.js',
     'ui.bootstrap',
     'oc.lazyLoad',
@@ -119,14 +122,48 @@ adminUI
 
             .state('app.table1', {
                 url: '/table1',
-                templateUrl: 'tpl/index/table1.html',
-                controller: "table1"
+                templateUrl: 'tpl/table/table1.html',
+                controller: "table1",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/table/table.js');
+                    }]
+                }
             })
             .state('app.table2', {
                 url: '/table2',
-                templateUrl: 'tpl/index/table2.html',
-                controller: "table2"
+                templateUrl: 'tpl/table/table2.html',
+                controller: "table2",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/table/table.js');
+                    }]
+                }
             })
+            .state('app.icons', {
+                url: '/ui/icons',
+                templateUrl: 'tpl/ui/icons.html',
+                controller: "ui",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/ui/ui.js');
+                    }]
+                }
+            })
+            .state('app.buttons', {
+                url: '/ui/buttons',
+                templateUrl: 'tpl/ui/buttons.html',
+                controller: "ui",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/ui/ui.js');
+                    }]
+                }
+            })
+
+
+
+
             .state('app.invoice', {
                 url: '/invoice',
                 templateUrl: 'tpl/index/invoice.html',
