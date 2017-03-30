@@ -160,24 +160,45 @@ adminUI
                     }]
                 }
             })
-
-
-
-
             .state('app.invoice', {
                 url: '/invoice',
-                templateUrl: 'tpl/index/invoice.html',
-                controller: "invoice"
+                templateUrl: 'tpl/other/invoice.html',
+                controller: "invoice",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/other/other.js');
+                    }]
+                }
             })
             .state('app.grid', {
                 url: '/grid',
-                templateUrl: 'tpl/index/grid.html',
-                controller: "grid"
+                templateUrl: 'tpl/other/grid.html',
+                controller: "grid",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/other/other.js');
+                    }]
+                }
             })
-            .state('app.search', {
-                url: '/search',
-                templateUrl: 'tpl/index/search.html',
-                controller: "search"
+            .state('app.timeline', {
+                url: '/timeline',
+                templateUrl: 'tpl/other/timeline.html',
+                controller: "timeline",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/other/other.js');
+                    }]
+                }
+            })
+            .state('app.calendar', {
+                url: '/calendar',
+                templateUrl: 'tpl/other/calendar.html',
+                controller: "calendar",
+                resolve:{
+                    loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load('res/js/controllers/other/other.js');
+                    }]
+                }
             });
     });
 var app = {

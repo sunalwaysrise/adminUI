@@ -1,0 +1,25 @@
+<ol class="breadcrumb">
+    <li>首页</li>
+    <li class="active">时间线</li>
+</ol>
+<h1 class="page-title">时间线</h1>
+<ul class="timeline">
+    <li ng-repeat="i in t1" class="{{i.class}}">
+        <time class="event-time">
+            <span class="date">昨天</span>
+            <span class="time">8:03 <span class="fw-semi-bold">pm</span></span>
+        </time>
+        <span class="event-icon event-icon-success"><i class="glyphicon glyphicon-map-marker"></i></span>
+        <section class="event">
+            <span class="thumb-sm avatar pull-left mr-sm"><img class="img-circle" ng-src="res/img/people/{{i.img}}" alt="{{i.desc}}" /></span>
+            <h4 class="event-heading"><a>{{i.name}}</a> <small>{{i.desc}}</small></h4>
+            <p class="fs-sm text-muted">{{i.summary}}</p>
+            <footer>
+                <ul class="post-links">
+                    <li><a>{{i.count}}</a></li>
+                    <li><a><span class="text-danger"><i class="fa fa-heart"></i> 喜欢</span></a></li>
+                </ul>
+            </footer>
+        </section>
+    </li>
+</ul>

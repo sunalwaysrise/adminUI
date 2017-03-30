@@ -248,10 +248,10 @@ angular.module('app.controllers', []).controller('bootstrap', function($scope) {
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.slides = [
-        {image: '//unsplash.it/701/300', text:'', id: 0},
-        {image: '//unsplash.it/401/300', text:'', id: 1},
-        {image: '//unsplash.it/501/300', text:'', id: 2},
-        {image: '//unsplash.it/601/300', text:'', id: 3}
+        {image: 'demo/image/300.jpg', text:'', id: 0},
+        {image: 'demo/image/400.jpg', text:'', id: 1},
+        {image: 'demo/image/500.jpg', text:'', id: 2},
+        {image: 'demo/image/600.jpg', text:'', id: 3}
     ];
 
 

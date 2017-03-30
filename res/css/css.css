@@ -83,6 +83,10 @@ input{outline:0px;}
     margin-top:-2px;
 }
 
+.text-align-right .btn{
+    float:none;
+}
+
 @media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu-xs {
         position: absolute !important;

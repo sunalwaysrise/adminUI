@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Apple MacBook Air 13.3 ",
+    "description":"银色(Core i5 处理器/8GB内存/256GB SSD闪存 MMGG2CH/A)",
+    "quantity":3,
+    "price":8488.00
+  },
+  {
+    "name":"Apple MacBook Pro 13.3",
+    "description":"银色(Core i5 处理器/8GB内存/128GB SSD闪存/Retina屏 MF839CH/A)",
+    "quantity":2,
+    "price":9188.00
+  },
+  {
+    "name":"Apple iMac 21.5英寸一体机",
+    "description":"双核 Core i5 处理器/8GB内存/1TB存储 MK142CH/A",
+    "quantity":5,
+    "price":7388.00
+  },
+  {
+    "name":"Apple Mac Pro专业级台式电脑",
+    "description":"四核 Intel E5 处理器/12GB内存/双图形处理器/2GB VRAM ME253CH/A",
+    "quantity":2,
+    "price":21888
+  }
+]

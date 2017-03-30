@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-md-11">
+        <section class="widget widget-invoice">
+            <header>
+                <div class="row">
+                    <div class="col-sm-6 col-print-6">
+                        <h2>WY-UI</h2>
+                    </div>
+                    <div class="col-sm-6 col-print-6">
+                        <h3 class="text-align-right">#<span class="fw-semi-bold">781230</span> / <small>2017.03.30</small></h3>
+                        <div class="text-muted fs-larger text-align-right">编号</div>
+                    </div>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div class="row mb-lg">
+                    <section class="col-sm-6 col-print-6">
+                        <h4 class="text-muted no-margin">企业信息</h4>
+                        <h3 class="company-name">北京闻壹信息科技有限公司</h3>
+                        <address>
+                            北京市大兴区<br>
+                            科苑路9号<br>
+                            2号楼一层<br>
+                            <abbr title="Work email">邮箱:</abbr> <a href="mailto:#">wenyiit@wenyiit.com</a><br>
+                            <abbr title="Work Phone">电话:</abbr> (010) 5098-4195<br>
+                            <abbr title="Work Fax">手机:</abbr>  186-1024-7612
+                        </address>
+                    </section>
+                    <section class="col-sm-6 col-print-6 text-align-right">
+                        <h4 class="text-muted no-margin">客户信息</h4>
+                        <h3 class="client-name">北京百度网讯科技有限公司</h3>
+                        <address>
+                            北京市海淀区<br>
+                            上地十街10号<br>
+                            百度大厦2层<br>
+                            <abbr title="Work email">邮箱:</abbr> <a href="mailto:#">baidu@baidu.com</a><br>
+                            <abbr title="Work Phone">电话:</abbr> (010) 5992-8888<br>
+                            <abbr title="Work Fax">传真:</abbr> (010) 5992-8889
+                            <p class="no-margin"><strong>备注:</strong></p>
+                            <p class="text-muted fs-mini"> 开发、生产计算机硬件及配套零件、网络产品、多媒体产品、电子信息产品及网络通讯产品、办公自动化设备、仪器仪表、电气及印刷照排设备</p>
+                        </address>
+                    </section>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>名称</th>
+                        <th class="hidden-xs">描述</th>
+                        <th>数量</th>
+                        <th class="hidden-xs">单价</th>
+                        <th>合计</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="i in products">
+                            <td>{{$index+1}}</td>
+                            <td>{{i.name}}</td>
+                            <td class="hidden-xs">{{i.description}}</td>
+                            <td>{{i.quantity}}</td>
+                            <td class="hidden-xs">{{i.price}}</td>
+                            <td>{{i.price*i.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-sm-6 col-print-6">
+                        <p><strong>备注:</strong>由 Apple 发货，并提供售后服务。</p>
+                    </div>
+                    <div class="col-sm-6 col-print-6">
+                        <div class="row text-align-right">
+                            <div class="col-xs-6"></div>
+                            <div class="col-xs-3">
+                                <p>总价</p>
+                                <p>税率(17%)</p>
+                                <p class="no-margin"><strong>合计</strong></p>
+                            </div>
+                            <div class="col-xs-3">
+                                <p>{{total}}</p>
+                                <p>{{tax}}</p>
+                                <p class="no-margin"><strong>{{total2}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-align-right mt-lg mb-xs">
+                    市场总监
+                </p>
+                <p class="text-align-right">
+                    <span class="fw-semi-bold">佳明</span>
+                </p>
+                <div class="btn-toolbar mt-lg text-align-right hidden-print">
+                    <button ng-click="print()" class="btn btn-inverse">
+                        <i class="fa fa-print"></i>&nbsp;&nbsp;打印
+                    </button>
+                    <button class="btn btn-danger">
+                        确认下单&nbsp;<span class="circle bg-white"><i class="fa fa-arrow-right text-danger"></i></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

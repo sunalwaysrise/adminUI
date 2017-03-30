@@ -1,7 +1,8 @@
 /**
  * Created by wenbin.lu on 2017/3/28.
  */
-angular.module('app.controllers', []).controller('table1', function($scope,$resource) {
+angular.module('app.controllers', [])
+.controller('table1', function($scope,$resource) {
     Pace.restart();
     var lists = $resource('demo/json/lists.json').query();
     $scope.lists=lists;

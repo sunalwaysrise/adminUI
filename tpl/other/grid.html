@@ -1,0 +1,171 @@
+<ol class="breadcrumb">
+    <li>首页</li>
+    <li class="active">网格</li>
+</ol>
+<h1 class="page-title">网格</h1>
+<div class="row">
+    <div class="col-md-7 col-lg-offset-1">
+        <section class="widget">
+            <header>
+                <h4>{{t1.author}} &nbsp;<span class="label label-danger fw-normal">{{t1.country}}</span></h4>
+            </header>
+            <div class="widget-body">
+                <p><strong>{{t1.t.title}}</strong>：{{t1.t.desc}}</p>
+                <ul class="text-list">
+                    <li ng-repeat="i in t1.a">{{i.title}}<strong></strong> - {{i.desc}}</li>
+                </ul>
+                <p>{{t1.e.desc}}</p>
+                <p>{{t1.e.time}}</p>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section class="widget" style="min-height:280px">
+            <header>
+                <h5>加载效果 <span class="fw-semi-bold">动画</span></h5>
+            </header>
+            <div class="widget-body">
+                <div class="loader animated fadeIn handle"><span class="spinner"><i class="fa fa-spinner fa-spin"></i></span></div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6" >
+        <section class="widget">
+            <header>
+                <h5>{{t2.author}} <span class="fw-semi-bold">{{t2.country}}</span></h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body">
+                <p ng-repeat="i in t2.a">{{i}}</p>
+            </div>
+        </section>
+        <section class="widget">
+            <header>
+                <h5><span class="label label-primary"><i class="fa fa-facebook"></i></span> &nbsp;图片 <span class="fw-semi-bold">列表</span></h5>
+                <div class="widget-controls"><a><i class="fa fa-refresh"></i></a></div>
+            </header>
+            <div class="widget-body no-padding">
+                <div class="list-group list-group-lg">
+                    <a class="list-group-item" ng-repeat="i in t3">
+                        <span class="thumb-sm pull-left mr"><img class="img-circle" ng-src="res/img/people/{{i.img}}" alt="{{i.name}}"></span>
+                        <i class="fa fa-circle pull-right text-{{i.status}} mt-sm"></i>
+                        <h5 class="no-margin">{{i.name}}</h5>
+                        <small class="text-muted">{{i.desc}}</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="widget" >
+            <header>
+                <h5>补充内容</h5>
+                <div class="widget-controls">
+                    <span uib-dropdown>
+                        <a href id="simple-dropdown" uib-dropdown-toggle><i class="fa fa-cog"></i></a>
+                        <ul class="dropdown-menu  dropdown-menu-right" uib-dropdown-menu >
+                            <li><a>刷新&nbsp;&nbsp;<span class="badge bg-success animated bounceIn"><strong>9</strong></span></a></li>
+                            <li class="divider"></li>
+                            <li><a>关闭</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </header>
+            <div class="widget-body">
+                <h3 class="text-align-center no-margin">添加新的会员</h3>
+                <p class="lead text-muted text-align-center">
+                    按照需要添加被认为是必要的基本信息
+                </p>
+                <form>
+                    <div class="form-group">
+                        <label for="author"><i class="fa fa-circle text-warning"></i> &nbsp; 姓名</label>
+                        <input type="email" class="form-control" id="author" placeholder="必填">
+                    </div>
+                    <div class="form-group">
+                        <label for="author_desc"><i class="fa fa-circle text-danger"></i> &nbsp; 备注</label>
+                        <input class="form-control" id="author_desc" type="text" placeholder="选填">
+                    </div>
+                    <div class="clearfix">
+                        <div class="btn-toolbar pull-right">
+                            <button type="button" class="btn btn-transparent">取消</button>
+                            <button type="button" class="btn btn-success">&nbsp;保存&nbsp;</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+    <div class="col-md-6" >
+        <section class="widget">
+            <header>
+                <h5>列表 <span class="badge bg-success">6</span></h5>
+                <span class="text-muted">多行表头</span>
+                <div class="widget-controls">
+                    <a><i class="fa fa-refresh"></i></a>
+                    <a><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body no-padding">
+                <ul class="news-list stretchable">
+                    <li ng-repeat="i in t3">
+                        <span class="icon bg-{{i.status}} text-white"><i class="fa {{i.icon}}"></i></span>
+                        <div class="news-item-info">
+                            <h4 class="name no-margin mb-xs"><a>{{i.name}}</a></h4>
+                            <p class="fs-mini">{{i.summary}}</p>
+                            <time class="help-block">{{i.desc}}</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="widget locked">
+            <header>
+                <h5>文字介绍</h5>
+                <div class="widget-controls">
+                    <a><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a><i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <blockquote >
+                    也许每一个男子全都有过这样的两个女人，至少两个．
+                    娶了红玫瑰，久而久之，红的变了墙上的一抹蚊子血，白的还是“床前明月光”；
+                    娶了白玫瑰，白的便是衣服上的一粒饭粘子，红的却是心口上的一颗朱砂痣。
+                    <footer>
+                        张爱玲
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <section class="search-result-item" ng-repeat="i in t3">
+            <a class="image-link">
+                <img class="image" ng-src="res/img/people/{{i.img}}">
+            </a>
+            <div class="search-result-item-body">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h4 class="search-result-item-heading"><a>{{i.name}}</a></h4>
+                        <p class="info">{{i.desc}}</p>
+                        <p class="description">{{i.summary}}</p>
+                    </div>
+                    <div class="col-sm-3 text-align-center">
+                        <p class="value3 mt-sm">{{i.count}}</p>
+                        <p class="fs-mini text-muted">每月</p>
+                        <a class="btn btn-primary btn-info btn-sm">查看</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-align-center">
+            <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false" previous-text="上一页" next-text="下一页"></ul>
+        </div>
+    </div>
+</div>
