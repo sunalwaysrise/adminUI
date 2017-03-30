@@ -113,7 +113,7 @@
                             </a>
                             <div class="list-group-item">
                                 <span class="thumb-sm pull-left mr clearfix">
-                                    <img class="img-circle" data-src="demo/img/people/a5.jpg" alt="...">
+                                    <img class="img-circle" ng-src="res/img/people/a5.jpg" alt="...">
                                 </span>
                                 <p class="no-margin overflow-hidden">
                                     User <a href="#">Jeff</a> registered
@@ -163,11 +163,7 @@
                             </a>
                         </div>
                         <footer class="panel-footer text-sm">
-                            <button class="btn btn-xs btn-link pull-right btn-notifications-reload"
-                                    id="load-notifications-btn"
-                                    data-ajax-load="demo/ajax/notifications.php"
-                                    data-ajax-target="#notifications-list"
-                                    data-loading-text="<i class='fa fa-refresh fa-spin mr-xs'></i> Loading...">
+                            <button class="btn btn-xs btn-link pull-right btn-notifications-reload">
                                 <i class="fa fa-refresh"></i>
                             </button>
                             <span class="fs-mini">Synced at: 21 Apr 2014 18:36</span>
@@ -180,9 +176,9 @@
                 <ul class="dropdown-menu">
                     <li><a><i class="glyphicon glyphicon-user"></i> 我的账户</a></li>
                     <li class="divider"></li>
-                    <li><a data-ui-sref="app.page({ page: 'inbox', child: null })">待办事项<span class="badge bg-danger animated bounceIn">9</span></a></li>
+                    <li><a data-ui-sref="app.calendar">待办事项<span class="badge bg-danger animated bounceIn">9</span></a></li>
                     <li class="divider"></li>
-                    <li><a data-ui-sref="login"><i class="fa fa-sign-out"></i> 退出</a></li>
+                    <li><a data-ui-sref="access.signin"><i class="fa fa-sign-out"></i> 退出</a></li>
                 </ul>
             </li>
         </ul>
